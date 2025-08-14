@@ -125,7 +125,7 @@ docker run -d \
 
 ```env
 # Database Configuration
-DATABASE_URL=mysql+pymysql://username:password@localhost:3306/farmer_db
+DATABASE_URL=mysql+pymysql://username:password@localhost:1234/farmers_dbs
 
 # Algorithm Weights (must sum to 1.0)
 TFIDF_WEIGHT=0.25          # Semantic similarity weight
