@@ -22,7 +22,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Database connection
-DATABASE_URL = "mysql+pymysql://dbadmin:dbuser%402023@172.25.144.165:3306/paddy_live"
+DATABASE_URL = "mysql+pymysql://dbadmin:dbuser%402023@562.25.564.165:3306/db_database"
 engine = create_engine(DATABASE_URL, pool_size=10, max_overflow=20)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
@@ -273,4 +273,5 @@ def process_farmer(farmer, db, tfidf_weight, fuzzy_weight):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)    
+
 
